@@ -11,7 +11,7 @@ async function wanikani(apiToken) {
     .json()
     .then((data) =>
       data.data.map(
-        (assignment) => subjects[assignment.data.subject_id].data.characters
+        (assignment) => subjects[assignment.data.subject_id - 1].data.characters
       )
     );
 }
